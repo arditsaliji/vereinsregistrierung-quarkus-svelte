@@ -49,8 +49,8 @@ class ItemService {
 
 
     // after frontend changes in component
-        // 1. cd todo-frontend
+        // 1. cd vereinsregistrierung-frontend
         // 2. npm run build
-        // 3. copy build folder in todo-frontent/public into src/main/resources/META-INF.resources
+        // 3. copy build folder in vereinsregistrierung-frontend/public into src/main/resources/META-INF.resources
     // start kotlin app: mvn compile quarkus:dev
 }

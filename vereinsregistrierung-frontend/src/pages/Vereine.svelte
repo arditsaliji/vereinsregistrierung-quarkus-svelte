@@ -1,11 +1,23 @@
 <style>
+    .data-table {
+        width: 100%;
+        text-align: center;
+    }
+
+    .title {
+        margin-left: 20px;
+        margin-top: 50px;
+        margin-bottom: 50px;
+        font-size: 2.4rem;
+        opacity: 70%;
+    }
 
 </style>
 <main>
     <div class="container">
-        <h1 class="app-title">Warenkorb</h1>
+        <p class="title">Vereine ({vereine.length})</p>
 
-        <table>
+        <table class="data-table">
             <tr>
                 <th>Name</th>
                 <th>Adresse</th>
@@ -13,7 +25,6 @@
                 <th>Zweck</th>
                 <th>Obmann</th>
                 <th>Entstehung</th>
-                <th> </th>
                 <th> </th>
             </tr>
             {#each vereine as verein}
@@ -25,30 +36,11 @@
                     <td>{verein.obmann}</td>
                     <td>{verein.entstehung}</td>
                     <td>
-                        <button>Editieren</button>
-                    </td>
-                    <td>
-                        <button on:click={() => deleteItem(verein)}>Löschen</button>
+                        <IconButton class="material-icons">edit</IconButton>
+                        <IconButton class="material-icons">delete</IconButton>
                     </td>
                 </tr>
             {/each}
-
-            <div>
-                {#if addItemModeActive}
-                    <label>
-                        Name: <input bind:value="{newItem.name}" />
-                    </label>
-                    <label>
-                        Name: <input type="number" bind:value="{newItem.price}" />
-                    </label>
-                    <div>
-                        <button on:click={() => addItemToList()}>Hinzufügen</button>
-                    </div>
-                {/if}
-                {#if !addItemModeActive}
-                    <button on:click={() => addItemModeActive = !addItemModeActive}>+</button>
-                {/if}
-            </div>
         </table>
 
     </div>
@@ -56,6 +48,7 @@
 
 <script>
     import {onMount} from "svelte";
+    import IconButton from '@smui/icon-button';
 
     let vereine = [];
     let newItem = {

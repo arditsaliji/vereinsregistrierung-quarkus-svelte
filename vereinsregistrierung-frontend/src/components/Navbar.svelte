@@ -5,6 +5,9 @@
         display: flex;
         align-items: center;
         font-size: 1.2rem;
+        margin-top: -10px;
+        margin-left: -10px;
+        margin-right: -10px;
     }
 
     .nav-menu {
@@ -18,15 +21,15 @@
     }
 
     a {
-        color: #e5e5e7;
-        text-decoration: none;
-        padding: 0.5rem 1rem;
+        color: #e5e5e7 !important;
+        text-decoration: none !important;
+        padding: 0.5rem 1rem !important;
     }
 
     a:hover {
-        color: #fff;
-        border-radius: 4px;
-        transition: all 0.2s ease-out;
+        color: #fff !important;
+        border-radius: 4px !important;
+        transition: all 0.2s ease-out !important;
     }
 </style>
 <main>
@@ -35,8 +38,11 @@
             <Link to="/" class="nav-links" style="color: #e5e5e7; text-decoration: none; padding: 0.5rem 1rem;">
                 Login
             </Link>
-            <Link to="/vereine" class="nav-links" style="color: #e5e5e7; text-decoration: none; padding: 0.5rem 1rem;">
+            <Link to="/verein" class="nav-links" style="color: #e5e5e7; text-decoration: none; padding: 0.5rem 1rem;">
                 Vereine
+            </Link>
+            <Link to="/mitglied" class="nav-links" style="color: #e5e5e7; text-decoration: none; padding: 0.5rem 1rem;">
+                Mitglieder
             </Link>
         </ul>
     </nav>

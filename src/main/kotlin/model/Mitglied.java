@@ -76,5 +76,9 @@ public class Mitglied implements Serializable {
     public void setVerein(Verein verein) {
         this.verein = verein;
     }
+
+    public String getStringForFilter() {
+        return vorname + ", " + nachname + ", " + adresse + ", " + geburtsdatum + ", " + verein.getStringForFilter();
+    }
 }
 

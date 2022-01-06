@@ -76,6 +76,10 @@ public class Verein implements Serializable {
         this.obmann = obmann;
     }
 
+    public String getStringForFilter() {
+        return id + "," + name + "," + zweck + "," + adresse + "," + entstehung + "," + kategorie + "," + obmann + ",";
+    }
+
     public String addToCsv(){
         return id + "," + name + "," + zweck + "," + adresse + "," + entstehung + "," + kategorie + "," + obmann + ",";
     }

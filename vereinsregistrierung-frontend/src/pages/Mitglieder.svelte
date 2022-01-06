@@ -15,6 +15,12 @@
 </style>
 <main>
     <div class="container">
+
+        <div style="margin-top: 50px; margin-bottom: 30px; text-align: center;">
+                <input type="text" bind:value={filterString}/>
+                <IconButton class="material-icons" on:click={() => filterMitglieder()}>search</IconButton>
+        </div>
+
         <p class="title">Mitglieder ({mitglieder.length})</p>
 
         <table class="data-table">
@@ -49,8 +55,14 @@
     import IconButton from '@smui/icon-button';
 
     let mitglieder = [];
+    let filterString = "";
     onMount(async function() {
         const response = await fetch("/mitglieder");
         mitglieder = await response.json();
     });
+
+    async function filterMitglieder() {
+        const response = await fetch("/mitglieder/filtered/" + filterString);
+        mitglieder = await response.json();
+    }
 </script>

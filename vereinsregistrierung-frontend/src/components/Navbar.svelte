@@ -35,9 +35,6 @@
 <main>
     <nav class="NavbarItems">
         <ul class="nav-menu">
-            <Link to="/" class="nav-links" style="color: #e5e5e7; text-decoration: none; padding: 0.5rem 1rem;">
-                Login
-            </Link>
             <Link to="/verein" class="nav-links" style="color: #e5e5e7; text-decoration: none; padding: 0.5rem 1rem;">
                 Vereine
             </Link>

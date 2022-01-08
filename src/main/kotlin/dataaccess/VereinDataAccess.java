@@ -11,7 +11,6 @@ import java.util.List;
 public class VereinDataAccess {
 
     public List<Verein> getVereine() throws Exception {
-        System.out.println("I am in");
         List<Verein> vereine = new ArrayList<>();
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
@@ -33,7 +32,6 @@ public class VereinDataAccess {
                 String obmann = resultSet.getString("obmann");
 
                 Verein verein = new Verein(id, name, zweck, adresse, entstehung, kategorie, obmann);
-                System.out.println(verein.getName());
                 vereine.add(verein);
             }
             return vereine;

@@ -11,6 +11,18 @@
 		background: #c4c4c4;
 		cursor: pointer;
 	}
+
+	:global(input) {
+		border-style: solid !important;
+	}
+
+	:global(.s-dialog__content) {
+		background: #fff !important;
+		border-radius: 9px !important;
+		padding-left: 10px;
+		padding-bottom: 10px;
+		padding-top: 10px;
+	}
 </style>
 <main>
 	<Router url="{url}">
